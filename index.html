@@ -2,16 +2,22 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="WDD 231 course home page — Frontend Web Development I. Student portfolio and course tracker for the Web and Computer Programming certificate." />
-    <meta name="author" content="Your Name" />
+        content="WDD 231 course home page — Frontend Web Development I. Student portfolio and course tracker for the Web and Computer Programming certificate.">
+    <meta name="author" content="Your Name">
     <title>WDD 231 | Home</title>
 
+
+    <!-- Google Fonts preconnect -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet">
+
     <!-- CSS -->
-    <link rel="stylesheet" href="styles/small.css" />
-    <link rel="stylesheet" href="styles/larger.css" />
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/larger.css">
 
     <!-- JavaScript -->
     <script src="scripts/navigation.js" defer></script>
@@ -25,7 +31,7 @@
     <header>
         <div class="header-inner">
             <a class="site-brand" href="index.html" aria-label="WDD231 Home">
-                <img src="images/logo.svg" alt="WDD231 Site Logo" class="site-logo" width="36" height="36" />
+                <img src="images/logo.svg" alt="WDD231 Site Logo" class="site-logo" width="36" height="36">
                 <span class="brand-name">Site Name</span>
             </a>
 
@@ -53,7 +59,7 @@
             <!-- About Me -->
             <section aria-labelledby="about-heading">
                 <div class="section-box">
-                    <div class="section-box-header" id="about-heading">About Me</div>
+                    <h2 class="section-box-header" id="about-heading">About Me</h2>
                     <div class="section-box-body">
                         <p>
                             Hi! My name is Benjamin Hoffman and I am a Software Engineer for Dick's Sporting Goods! As
@@ -68,7 +74,7 @@
             <!-- Student Photo -->
             <section aria-labelledby="photo-heading">
                 <div class="section-box">
-                    <div class="section-box-header" id="photo-heading">Student Photo</div>
+                    <h2 class="section-box-header" id="photo-heading">Student Photo</h2>
                     <div class="section-box-body photo-body">
                         <img src="images/profile.jpg" alt="a picture of Benjamin Hoffman on his wedding day">
                     </div>
@@ -80,7 +86,7 @@
         <!-- Web Certificate Courses -->
         <section aria-labelledby="courses-heading">
             <div class="courses-section">
-                <div class="section-box-header" id="courses-heading">Web Certificate Courses</div>
+                <h2 class="section-box-header" id="courses-heading">Web Certificate Courses</h2>
                 <div class="courses-body">
 
                     <!-- Filter Buttons -->
@@ -91,7 +97,7 @@
                     </div>
 
                     <!-- Course Cards -->
-                    <div id="course-cards" aria-live="polite" aria-label="Course list"></div>
+                    <div id="course-cards" aria-live="polite"></div>
 
                     <!-- Total Credits -->
                     <p class="credits-summary">
@@ -109,7 +115,7 @@
         <div class="footer-inner">
 
             <!-- Social Media Links -->
-            <div class="social-links" aria-label="Social media links">
+            <div class="social-links">
 
                 <!-- LinkedIn -->
                 <a href="https://www.linkedin.com/in/benjamin-hoffman-775258203/" target="_blank"
