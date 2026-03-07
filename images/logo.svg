@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40" fill="none" aria-label="WDD231 Site Logo">
+  <rect width="40" height="40" rx="8" fill="#00e5c0" opacity="0.12"/>
+  <rect x="1" y="1" width="38" height="38" rx="7" stroke="#00e5c0" stroke-width="1.5" opacity="0.4"/>
+  <text x="20" y="16" font-family="sans-serif" font-weight="800" font-size="9" fill="#00e5c0" text-anchor="middle">WDD</text>
+  <text x="20" y="28" font-family="sans-serif" font-weight="800" font-size="11" fill="#ffffff" text-anchor="middle">231</text>
+</svg>
