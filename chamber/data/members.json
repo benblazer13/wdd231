@@ -1,0 +1,84 @@
+{
+  "members": [
+    {
+      "name": "Primanti Brothers",
+      "tagline": "Almost Famous since 1933",
+      "address": "46 18th St, Pittsburgh, PA 15222",
+      "phone": "(412) 263-2142",
+      "website": "https://www.primantibros.com",
+      "image": "primanti.webp",
+      "membershipLevel": 3,
+      "description": "Pittsburgh's legendary sandwich shop piling coleslaw and fries right on the sandwich since the Strip District days."
+    },
+    {
+      "name": "Phipps Conservatory",
+      "tagline": "A garden oasis in the heart of the city",
+      "address": "1 Schenley Dr, Pittsburgh, PA 15213",
+      "phone": "(412) 622-6914",
+      "website": "https://www.phipps.conservatory.org",
+      "image": "phipps.webp",
+      "membershipLevel": 3,
+      "description": "World-class botanical garden and greenhouse in Oakland, featuring seasonal flower shows and sustainability exhibits."
+    },
+    {
+      "name": "Pittsburgh Public Market",
+      "tagline": "Fresh, local, and always in season",
+      "address": "2100 Smallman St, Pittsburgh, PA 15222",
+      "phone": "(412) 682-4111",
+      "website": "https://www.pgpublicmarket.com",
+      "image": "publicmarket.webp",
+      "membershipLevel": 2,
+      "description": "Year-round indoor farmers market in the Strip District featuring local vendors, artisans, and fresh produce."
+    },
+    {
+      "name": "UPMC Health System",
+      "tagline": "Life changing medicine",
+      "address": "200 Lothrop St, Pittsburgh, PA 15213",
+      "phone": "(412) 647-8762",
+      "website": "https://www.upmc.com",
+      "image": "upmc.webp",
+      "membershipLevel": 3,
+      "description": "One of the nation's leading healthcare systems and Pittsburgh's largest employer, based in Oakland."
+    },
+    {
+      "name": "The Andy Warhol Museum",
+      "tagline": "The most comprehensive single-artist museum in the world",
+      "address": "117 Sandusky St, Pittsburgh, PA 15212",
+      "phone": "(412) 237-8300",
+      "website": "https://www.warhol.org",
+      "image": "warhol.webp",
+      "membershipLevel": 3,
+      "description": "Seven floors celebrating the life and work of Pittsburgh's most famous son, located on the North Shore."
+    },
+    {
+      "name": "Klavon's Ice Cream Parlor",
+      "tagline": "Scooping happiness since 1923",
+      "address": "2801 Penn Ave, Pittsburgh, PA 15222",
+      "phone": "(412) 434-0451",
+      "website": "https://www.klavons.com",
+      "image": "klavons.webp",
+      "membershipLevel": 2,
+      "description": "Beloved Strip District soda fountain serving hand-dipped ice cream in a beautifully preserved vintage parlor."
+    },
+    {
+      "name": "Pittsburgh Technology Council",
+      "tagline": "Powering the region's tech economy",
+      "address": "800 N Negley Ave, Pittsburgh, PA 15206",
+      "phone": "(412) 687-2700",
+      "website": "https://www.pghtech.org",
+      "image": "techcouncil.webp",
+      "membershipLevel": 1,
+      "description": "Nonprofit supporting tech businesses, startups, and entrepreneurs across the greater Pittsburgh region."
+    },
+    {
+      "name": "Station Square",
+      "tagline": "Where the city meets the river",
+      "address": "1 Station Square Dr, Pittsburgh, PA 15219",
+      "phone": "(412) 261-9911",
+      "website": "https://www.stationsquare.com",
+      "image": "stationsquare.webp",
+      "membershipLevel": 2,
+      "description": "Riverfront entertainment complex on the South Shore featuring dining, shopping, and stunning views of downtown."
+    }
+  ]
+}
