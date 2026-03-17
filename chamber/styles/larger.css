@@ -1,17 +1,30 @@
+/* =====================================================
+   Pittsburgh Chamber of Commerce — larger.css
+   Breakpoints: 640px (tablet), 1024px (desktop), 1280px (wide)
+===================================================== */
+
+/* ---- Tablet: 640px+ ---- */
 @media (min-width: 640px) {
 
   .header-inner {
     padding: 0.75rem 1.5rem;
   }
 
-  .logo-title { font-size: 1.45rem; }
+  .logo-title {
+    font-size: 1.45rem;
+  }
 
   .directory-hero {
     padding: 3.5rem 2rem 2rem;
   }
 
-  .directory-hero h1 { font-size: 3rem; }
-  .hero-sub { font-size: 1rem; }
+  .directory-hero h1 {
+    font-size: 3rem;
+  }
+
+  .hero-sub {
+    font-size: 1rem;
+  }
 
   .directory-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -41,9 +54,13 @@
   }
 }
 
+/* ---- Desktop: 1024px+ ---- */
 @media (min-width: 1024px) {
 
-  #hamburger { display: none; }
+  /* Show full nav — hide hamburger */
+  #hamburger {
+    display: none;
+  }
 
   #nav-menu {
     display: flex !important;
@@ -64,10 +81,11 @@
     letter-spacing: 0.09em;
     border-bottom: none;
     border-radius: var(--radius-sm);
-    color: rgba(255,255,255,0.75);
+    color: rgba(255, 255, 255, 0.75);
     position: relative;
   }
 
+  /* Gold underline animation */
   #nav-menu li a::after {
     content: '';
     position: absolute;
@@ -93,35 +111,174 @@
     text-decoration: none;
   }
 
+  /* Hero */
   .directory-hero {
     padding: 4rem 2.5rem 2.5rem;
   }
 
-  .directory-hero h1 { font-size: 3.75rem; }
+  .directory-hero h1 {
+    font-size: 3.75rem;
+  }
 
+  /* 3-column grid */
   .directory-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  .card-img-wrap { height: 155px; }
+  .card-img-wrap {
+    height: 155px;
+  }
 
+  /* List item — 4-column with phone visible */
   .member-list-item {
     grid-template-columns: 64px 1fr 1fr auto;
   }
 
+  /* Footer */
   .footer-inner {
     padding: 3rem 2.5rem;
     gap: 2.5rem;
   }
 
-  .footer-social { flex-direction: row; }
+  .footer-social {
+    flex-direction: row;
+  }
 }
 
+/* ---- Wide: 1280px+ ---- */
 @media (min-width: 1280px) {
 
-  .directory-hero h1 { font-size: 4.5rem; }
+  .directory-hero h1 {
+    font-size: 4.5rem;
+  }
 
   .directory-grid {
     grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* =====================================================
+   HOME PAGE — larger.css additions
+===================================================== */
+
+/* ---- Tablet: 640px+ ---- */
+@media (min-width: 640px) {
+
+  .hero-overlay {
+    padding: 3rem 2rem 2.5rem;
+    align-items: center;
+  }
+
+  .hero-img {
+    min-height: 360px;
+  }
+
+  .hero {
+    min-height: 360px;
+  }
+
+  .hero-overlay {
+    min-height: 360px;
+  }
+
+  .hero-text h1 {
+    font-size: 2.8rem;
+  }
+
+  .hero-tagline {
+    font-size: 1rem;
+  }
+
+  /* 2-column info grid: events spans full, weather side by side */
+  .info-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .events-card {
+    grid-column: 1 / -1;
+    /* full width on tablet */
+  }
+
+  /* Spotlights: 2 columns */
+  .spotlights-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .home-label {
+    padding: 2rem 1.5rem 0.25rem;
+  }
+}
+
+/* ---- Desktop: 1024px+ ---- */
+@media (min-width: 1024px) {
+
+  /* Hero taller on desktop */
+  .hero {
+    min-height: 480px;
+  }
+
+  .hero-img {
+    min-height: 480px;
+  }
+
+  .hero-overlay {
+    min-height: 480px;
+    padding: 4rem 2.5rem 3rem;
+    align-items: flex-end;
+  }
+
+  .hero-text h1 {
+    font-size: 3.6rem;
+  }
+
+  .hero-tagline {
+    font-size: 1.05rem;
+    margin-bottom: 1.75rem;
+  }
+
+  /* 3-column info grid */
+  .info-grid {
+    grid-template-columns: 2fr 1.3fr 1.3fr;
+  }
+
+  .events-card {
+    grid-column: 1;
+    /* reset — own column */
+  }
+
+  /* Spotlights: 3 columns */
+  .spotlights-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .home-label {
+    padding: 2rem 2rem 0.25rem;
+  }
+
+  .spotlights-section {
+    padding: 2rem 2rem 1.5rem;
+  }
+
+  .info-grid {
+    padding: 1rem 2rem;
+  }
+}
+
+/* ---- Wide: 1280px+ ---- */
+@media (min-width: 1280px) {
+  .hero {
+    min-height: 560px;
+  }
+
+  .hero-img {
+    min-height: 560px;
+  }
+
+  .hero-overlay {
+    min-height: 560px;
+  }
+
+  .hero-text h1 {
+    font-size: 4.2rem;
   }
 }
