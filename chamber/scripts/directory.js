@@ -9,24 +9,24 @@ const PLACEHOLDER_SVG = `
   </svg>`;
 
 const BADGE_MAP = {
-  1: { label: 'Member',      cls: 'badge-member' },
-  2: { label: 'Silver',      cls: 'badge-silver' },
-  3: { label: 'Gold',        cls: 'badge-gold'   },
+  1: { label: 'Member', cls: 'badge-member' },
+  2: { label: 'Silver', cls: 'badge-silver' },
+  3: { label: 'Gold', cls: 'badge-gold' },
 };
 
 
-let currentView = 'grid'; 
+let currentView = 'grid';
 let membersData = [];
 
 
-const output        = document.getElementById('directory-output');
-const statusEl      = document.getElementById('directory-status');
-const gridBtn       = document.getElementById('grid-btn');
-const listBtn       = document.getElementById('list-btn');
-const hamburger     = document.getElementById('hamburger');
-const navMenu       = document.getElementById('nav-menu');
+const output = document.getElementById('directory-output');
+const statusEl = document.getElementById('directory-status');
+const gridBtn = document.getElementById('grid-btn');
+const listBtn = document.getElementById('list-btn');
+const hamburger = document.getElementById('hamburger');
+const navMenu = document.getElementById('nav-menu');
 const copyrightYear = document.getElementById('copyright-year');
-const lastModified  = document.getElementById('last-modified');
+const lastModified = document.getElementById('last-modified');
 
 
 if (copyrightYear) {
@@ -51,8 +51,12 @@ navMenu.addEventListener('click', (e) => {
 });
 
 
-gridBtn.addEventListener('click', () => setView('grid'));
-listBtn.addEventListener('click', () => setView('list'));
+if (gridBtn) {
+  gridBtn.addEventListener('click', () => setView('grid'));
+}
+if (listBtn) {
+  listBtn.addEventListener('click', () => setView('list'));
+}
 
 function setView(view) {
   if (view === currentView) return;
@@ -107,13 +111,13 @@ function buildCard(member) {
   article.innerHTML = `
     <div class="card-img-wrap">
       ${imgSrc
-        ? `<img
+      ? `<img
               src="${imgSrc}"
               alt="${member.name} business photo"
               loading="lazy"
               onerror="this.parentElement.innerHTML='${PLACEHOLDER_SVG.replace(/"/g, "'")}';"
             />`
-        : PLACEHOLDER_SVG}
+      : PLACEHOLDER_SVG}
     </div>
     <div class="card-body">
       <h2 class="card-name">${member.name}</h2>
@@ -154,13 +158,13 @@ function buildListItem(member) {
   article.innerHTML = `
     <div class="list-img-wrap">
       ${imgSrc
-        ? `<img
+      ? `<img
               src="${imgSrc}"
               alt="${member.name}"
               loading="lazy"
               onerror="this.parentElement.innerHTML='${PLACEHOLDER_SVG.replace(/"/g, "'")}';"
             />`
-        : PLACEHOLDER_SVG}
+      : PLACEHOLDER_SVG}
     </div>
     <div class="list-info">
       <p class="list-name">${member.name}</p>

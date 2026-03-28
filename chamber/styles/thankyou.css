@@ -1,0 +1,37 @@
+.thankyou-main {
+    max-width: 920px;
+    margin: 2rem auto;
+    padding: 0 1rem 2rem;
+}
+
+.summary-card {
+    background: var(--color-surface);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 1.2rem;
+    box-shadow: var(--shadow-card);
+}
+
+.summary-card h2 {
+    margin-top: 0;
+}
+
+.summary-card dl {
+    margin: 0;
+}
+
+.summary-card dt {
+    font-weight: 700;
+    margin-top: 0.9rem;
+    color: var(--color-primary);
+}
+
+.summary-card dd {
+    margin: 0.2rem 0 0.2rem 0;
+    color: var(--color-text);
+}
+
+.emphasis {
+    color: var(--color-secondary);
+    font-weight: 700;
+}
