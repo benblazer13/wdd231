@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="PokéForge site plan for outlining the design, structure, and purpose of a Pokémon Team Builder website." />
+    <meta name="author" content="Ben Hoffman" />
+    <title>PokéForge – Site Plan</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;900&family=Nunito:wght@400;500;600&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="siteplan.css" />
+</head>
+
+<body>
+
+    <header>
+        <span class="pokeball-icon" aria-hidden="true">⬤</span>
+        <h1>PokéForge</h1>
+        <p>Website Site Plan — Web Development Course Project</p>
+    </header>
+
+    <main>
+
+        <!-- 1. Site Name -->
+        <section class="card">
+            <h2><span class="num">01</span> Site Name</h2>
+            <p><span class="label">Name</span><br>PokéForge</p>
+            <p class="muted" style="margin-top: 0.75rem;">
+                "PokéForge" combines the iconic Pokémon brand prefix with "Forge," suggesting the act of crafting and
+                building something powerful. Just as a blacksmith forges tools, users forge their ideal battle team. The
+                name is short, memorable, and clearly communicates the site's purpose.
+            </p>
+            <p style="margin-top: 0.75rem;"><span class="label">Potential Domain</span><br>
+                <span class="muted">pokeforge.app</span>
+            </p>
+        </section>
+
+        <!-- 2. Site Purpose -->
+        <section class="card">
+            <h2><span class="num">02</span> Site Purpose</h2>
+            <p>
+                PokéForge is an interactive Pokémon Team Builder that lets fans browse the full Pokédex, explore
+                individual Pokémon stats, and assemble a saved team of up to six Pokémon. The site pulls live data from
+                the free PokéAPI and persists the user's team using local storage so progress is never lost between
+                visits.
+            </p>
+            <p style="margin-top: 0.75rem;">
+                Beyond browsing, the site provides a team analysis tool that evaluates type coverage — identifying
+                offensive strengths and defensive weaknesses in the selected team — helping players make more strategic
+                choices.
+            </p>
+        </section>
+
+        <!-- 3. Scenarios -->
+        <section class="card">
+            <h2><span class="num">03</span> Scenarios</h2>
+            <p class="muted" style="margin-bottom: 0.75rem;">Questions a target visitor might ask when coming to the
+                site:</p>
+            <ul class="scenarios">
+                <li>"I want to build a balanced team — how do I know if my team has too many weaknesses to Water-type
+                    moves?"</li>
+                <li>"Which Pokémon of the Fire type has the highest base Speed stat so I can outspeed my opponent?"</li>
+                <li>"I built a team last week — can I come back to the site and see it again without re-adding
+                    everything?"</li>
+                <li>"What are all the abilities and stats for Gengar before I decide whether to add it to my team?"</li>
+            </ul>
+        </section>
+
+        <!-- 4. Color Scheme -->
+        <section class="card">
+            <h2><span class="num">04</span> Color Scheme</h2>
+            <div class="swatches">
+                <div class="swatch">
+                    <div class="swatch-box" style="background:#0f0f1a;"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">Deep Void</span>
+                        <span class="swatch-hex">#0f0f1a</span>
+                        <span class="swatch-use">Primary background</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-box" style="background:#1a1a2e;"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">Card Dark</span>
+                        <span class="swatch-hex">#1a1a2e</span>
+                        <span class="swatch-use">Cards, nav, footer</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-box" style="background:#e3000b;"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">Pokédex Red</span>
+                        <span class="swatch-hex">#e3000b</span>
+                        <span class="swatch-use">Accent borders, buttons, section headings</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-box" style="background:#ffcb05;"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">Pikachu Yellow</span>
+                        <span class="swatch-hex">#ffcb05</span>
+                        <span class="swatch-use">Primary headings, highlights, labels</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-box" style="background:#f0f0f0;"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">Screen White</span>
+                        <span class="swatch-hex">#f0f0f0</span>
+                        <span class="swatch-use">Body text, card content</span>
+                    </div>
+                </div>
+                <div class="swatch">
+                    <div class="swatch-box" style="background:#9a9ab0;"></div>
+                    <div class="swatch-info">
+                        <span class="swatch-name">Muted Slate</span>
+                        <span class="swatch-hex">#9a9ab0</span>
+                        <span class="swatch-use">Secondary/supporting text</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Typography -->
+        <section class="card">
+            <h2><span class="num">05</span> Typography</h2>
+            <div class="type-samples">
+
+                <div class="type-sample">
+                    <p class="sample-label">Font 1 — Exo 2 · Headings, Site Name, Navigation, Buttons</p>
+                    <p class="font-heading-demo">PokéForge Team Builder</p>
+                    <p class="muted" style="font-size:0.8rem; margin-top:0.35rem;">Bold, geometric, and futuristic. Used
+                        for all headings (h1–h3), the site name, nav links, and UI labels. Weights: 700 and 900.</p>
+                </div>
+
+                <div class="type-sample">
+                    <p class="sample-label">Font 2 — Nunito · Body Text, Descriptions, Card Content</p>
+                    <p class="font-body-demo">Bulbasaur is a Grass/Poison-type Pokémon introduced in Generation I. It
+                        has a base stat total of 318 and is known for its resilient defensive typing.</p>
+                    <p class="muted" style="font-size:0.8rem; margin-top:0.35rem;">Rounded and approachable. Used for
+                        all body copy, Pokémon descriptions, and form labels. Weight: 400 and 600.</p>
+                </div>
+
+                <div class="type-sample">
+                    <p class="sample-label">Font 2 (variant) — Exo 2 · UI Labels, Stat Tags, Type Badges</p>
+                    <p class="font-ui-demo">Base Stat Total &nbsp;·&nbsp; Fire Type &nbsp;·&nbsp; Speed: 120</p>
+                    <p class="muted" style="font-size:0.8rem; margin-top:0.35rem;">Exo 2 at small size with wide
+                        letter-spacing for data labels and type badges throughout the UI.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 6. Wireframes -->
+        <section class="card">
+            <h2><span class="num">06</span> Wireframe — Home Page</h2>
+            <p class="muted" style="margin-bottom: 1rem;">Layout representations for mobile (320px) and desktop views of
+                <code>index.html</code>.</p>
+
+            <div class="wireframes">
+
+                <!-- Mobile -->
+                <div class="wireframe-wrap">
+                    <span class="wf-label">📱 Mobile (320px)</span>
+                    <div class="wf-mobile">
+                        <div class="wf-notch"></div>
+                        <div class="wf-block nav"
+                            style="display:flex; align-items:center; justify-content:space-between; padding: 0 6px;">
+                            <span
+                                style="font-size:6px; color:var(--accent-yellow); font-family:var(--font-heading);">POKÉFORGE</span>
+                            <span style="font-size:8px; color:var(--text-muted);">☰</span>
+                        </div>
+                        <div class="wf-block hero" style="height:55px; flex-direction:column; gap:3px;">
+                            <span class="label-inside" style="font-size:7px;">Hero: Tagline + CTA Button</span>
+                        </div>
+                        <div style="margin: 4px 8px 2px;">
+                            <span
+                                style="font-size:6px; color:var(--accent-yellow); font-family:var(--font-heading); text-transform:uppercase; letter-spacing:1px;">Featured
+                                Team of the Day</span>
+                        </div>
+                        <div class="wf-block grid mobile">
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                            <div class="cell"></div>
+                        </div>
+                        <div class="wf-block steps">
+                            <span style="font-size:6px; color:var(--text-muted);">How It Works (3 steps, stacked)</span>
+                        </div>
+                        <div class="wf-block filter"
+                            style="margin:4px 8px; height:16px; display:flex; align-items:center; justify-content:center;">
+                            <span style="font-size:6px; color:var(--text-muted);">Type Reference Chart</span>
+                        </div>
+                        <div class="wf-block footer"></div>
+                    </div>
+                </div>
+
+                <!-- Desktop -->
+                <div class="wireframe-wrap">
+                    <span class="wf-label">🖥 Desktop</span>
+                    <div class="wf-desktop">
+                        <div class="wf-topbar"></div>
+                        <div class="wf-block nav"
+                            style="display:flex; align-items:center; justify-content:space-between; padding: 0 10px; height:22px; margin: 0 0 0 0; border-radius:0;">
+                            <span
+                                style="font-size:7px; color:var(--accent-yellow); font-family:var(--font-heading); letter-spacing:1px;">POKÉFORGE</span>
+                            <span style="font-size:6px; color:var(--text-muted); display:flex; gap:10px;">
+                                <span>Home</span><span>Pokédex</span><span>My Team</span>
+                            </span>
+                        </div>
+                        <div class="wf-block hero desktop" style="margin: 6px 8px; flex-direction:column; gap:3px;">
+                            <span
+                                style="font-size:8px; color:var(--accent-yellow); font-family:var(--font-heading);">Build
+                                Your Perfect Team</span>
+                            <span style="font-size:6px; color:var(--text-muted);">[ Browse Pokédex → ]</span>
+                        </div>
+                        <div style="margin: 2px 8px;">
+                            <span
+                                style="font-size:6px; color:var(--accent-yellow); font-family:var(--font-heading); text-transform:uppercase; letter-spacing:1px;">Featured
+                                Team of the Day</span>
+                        </div>
+                        <div class="wf-block grid desktop" style="margin: 4px 8px;">
+                            <div class="cell desktop"></div>
+                            <div class="cell desktop"></div>
+                            <div class="cell desktop"></div>
+                            <div class="cell desktop"></div>
+                            <div class="cell desktop"></div>
+                            <div class="cell desktop" style="grid-column: span 1;"></div>
+                        </div>
+                        <div style="display:flex; gap:6px; margin:4px 8px;">
+                            <div
+                                style="flex:2; background:var(--bg-card-alt); border-radius:4px; height:30px; display:flex;align-items:center;justify-content:center;">
+                                <span style="font-size:6px;color:var(--text-muted);">How It Works (3 cols)</span>
+                            </div>
+                            <div
+                                style="flex:1; background:var(--bg-card-alt); border-radius:4px; height:30px; display:flex;align-items:center;justify-content:center;">
+                                <span style="font-size:6px;color:var(--text-muted);">Type Chart</span>
+                            </div>
+                        </div>
+                        <div class="wf-block footer" style="margin:4px 8px 8px;"></div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- 7. Page Summary -->
+        <section class="card">
+            <h2><span class="num">07</span> Page Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Page</th>
+                        <th>File</th>
+                        <th>Purpose</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Home</td>
+                        <td><code>index.html</code></td>
+                        <td>Landing page with featured random team, how-it-works guide, and type chart reference</td>
+                    </tr>
+                    <tr>
+                        <td>Pokédex Browser</td>
+                        <td><code>pokedex.html</code></td>
+                        <td>Browse and filter all Pokémon, view detailed stat modals, and add Pokémon to your saved team
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>My Team</td>
+                        <td><code>team.html</code></td>
+                        <td>View saved team from local storage, analyze type coverage, and submit team info via form
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Form Confirmation*</td>
+                        <td><code>form-action.html</code></td>
+                        <td>Displays submitted form data. Does not count toward 3-page requirement.</td>
+                    </tr>
+                    <tr>
+                        <td>Attributions*</td>
+                        <td><code>attributions.html</code></td>
+                        <td>Cites all external content sources. Linked from home page footer.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>PokéForge Site Plan &nbsp;·&nbsp; WDD231 Individual Project &nbsp;·&nbsp; Data source: <a
+                href="https://pokeapi.co" target="_blank" rel="noopener noreferrer"
+                style="color:var(--accent-yellow);">PokéAPI</a></p>
+    </footer>
+
+</body>
+
+</html>
