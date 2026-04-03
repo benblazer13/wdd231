@@ -282,3 +282,186 @@
     font-size: 4.2rem;
   }
 }
+
+/* =====================================================
+   DISCOVER PAGE — larger.css additions
+===================================================== */
+
+/* ---- Tablet/Medium: 641px - 1024px ---- */
+@media (min-width: 641px) and (max-width: 1024px) {
+
+  .attractions-section {
+    padding: 2rem 1.5rem 2.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.2rem;
+  }
+
+  /* Medium screens: 2-column grid with 4-card layout pattern */
+  .attractions-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+    grid-template-areas:
+      "card1 card2"
+      "card3 card4"
+      "card5 card6"
+      "card7 card8";
+  }
+
+  /* Image hover effect on medium screens */
+  .card-figure img {
+    transition: filter var(--transition), transform var(--transition);
+  }
+
+  .attraction-card:hover .card-figure img {
+    filter: brightness(0.9) saturate(1.15);
+    transform: scale(1.05);
+  }
+
+  .visit-message {
+    margin: 1.25rem 1.5rem 0;
+  }
+}
+
+/* ---- Desktop: 1025px+ ---- */
+@media (min-width: 1025px) {
+
+  .attractions-section {
+    padding: 2.5rem 2rem 3rem;
+  }
+
+  .section-header {
+    margin-bottom: 2rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.5rem;
+  }
+
+  /* Large screens: 4-column grid base */
+  .attractions-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.75rem;
+    grid-template-areas:
+      "card1 card1 card2 card2"
+      "card3 card4 card5 card6"
+      "card7 card7 card8 card8";
+  }
+
+  .attraction-card {
+    /* Override specific card grid areas */
+  }
+
+  .attraction-card:nth-child(1) {
+    grid-area: card1;
+  }
+
+  .attraction-card:nth-child(2) {
+    grid-area: card2;
+  }
+
+  .attraction-card:nth-child(3) {
+    grid-area: card3;
+  }
+
+  .attraction-card:nth-child(4) {
+    grid-area: card4;
+  }
+
+  .attraction-card:nth-child(5) {
+    grid-area: card5;
+  }
+
+  .attraction-card:nth-child(6) {
+    grid-area: card6;
+  }
+
+  .attraction-card:nth-child(7) {
+    grid-area: card7;
+  }
+
+  .attraction-card:nth-child(8) {
+    grid-area: card8;
+  }
+
+  /* Image hover effect on large screens */
+  .card-figure img {
+    transition: filter var(--transition), transform var(--transition);
+  }
+
+  .attraction-card:hover .card-figure img {
+    filter: brightness(0.85) saturate(1.2) contrast(1.05);
+    transform: scale(1.08);
+  }
+
+  .visit-message {
+    margin: 1.5rem 2rem 0;
+  }
+
+  .card-title {
+    font-size: 1.35rem;
+  }
+
+  .card-address {
+    font-size: 0.84rem;
+  }
+
+  .card-description {
+    font-size: 0.92rem;
+  }
+}
+
+/* ---- Wide: 1280px+ ---- */
+@media (min-width: 1280px) {
+
+  .attractions-section {
+    padding: 3rem 2rem 3.5rem;
+  }
+
+  .section-header h2 {
+    font-size: 2.8rem;
+  }
+
+  /* Very wide screens: Alternate pattern for visual interest */
+  .attractions-grid {
+    grid-template-columns: repeat(6, 1fr);
+    gap: 2rem;
+    grid-template-areas:
+      "card1 card1 card2 card2 card3 card3"
+      "card4 card5 card5 card6 card6 card7"
+      "card4 card8 card8 card8 card7 card7";
+  }
+
+  .attraction-card:nth-child(1) {
+    grid-area: card1;
+  }
+
+  .attraction-card:nth-child(2) {
+    grid-area: card2;
+  }
+
+  .attraction-card:nth-child(3) {
+    grid-area: card3;
+  }
+
+  .attraction-card:nth-child(4) {
+    grid-area: card4;
+  }
+
+  .attraction-card:nth-child(5) {
+    grid-area: card5;
+  }
+
+  .attraction-card:nth-child(6) {
+    grid-area: card6;
+  }
+
+  .attraction-card:nth-child(7) {
+    grid-area: card7;
+  }
+
+  .attraction-card:nth-child(8) {
+    grid-area: card8;
+  }
+}
