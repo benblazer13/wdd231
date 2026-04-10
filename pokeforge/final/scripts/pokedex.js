@@ -287,7 +287,7 @@ async function init() {
 
     populateTypeFilter();
 
-    // Search & filter events
+    // Search and filter events
     document.getElementById('search-input')?.addEventListener('input', applyFilters);
     document.getElementById('type-filter')?.addEventListener('change', applyFilters);
 
