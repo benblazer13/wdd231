@@ -303,7 +303,7 @@ async function init() {
     renderGrid();
   } catch (err) {
     if (grid) {
-      grid.innerHTML = `<p class="error-msg">⚠ Could not load Pokédex. Check your connection and refresh.</p>`;
+      grid.innerHTML = `<p class="error-msg">Could not load Pokédex. Check your connection and refresh.</p>`;
     }
     console.error('Pokédex load error:', err);
   }
