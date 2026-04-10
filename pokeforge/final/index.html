@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PokéForge – Build and analyze your ultimate Pokémon battle team. Browse all 151 original Pokémon, view full stats, and forge the perfect lineup." />
+  <meta name="author" content="Ben Hoffman" />
+  <meta property="og:title" content="PokéForge – Pokémon Team Builder" />
+  <meta property="og:description" content="Build and analyze your ultimate Pokémon battle team. Browse the Pokédex, save your roster, and check type coverage." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png" />
+  <title>PokéForge – Pokémon Team Builder</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;900&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/home.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="PokéForge Home">
+        <div class="nav-pokeball" aria-hidden="true"></div>
+        PokéForge
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pokedex.html">Pokédex</a></li>
+        <li><a href="team.html">My Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-heading">
+      <div class="hero-content">
+        <p class="hero-eyebrow">The Ultimate Battle Workshop</p>
+        <h1 id="hero-heading">Forge Your <span class="accent">Perfect Team</span></h1>
+        <p class="hero-sub">
+          Browse all 151 original Pokémon, inspect full stats and abilities, and assemble
+          a saved roster — your team persists right in your browser, ready whenever you are.
+        </p>
+        <div class="hero-cta">
+          <a href="pokedex.html" class="btn btn-primary">Browse Pokédex</a>
+          <a href="team.html" class="btn btn-ghost">View My Team</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <div class="pokeball-bg"></div>
+      </div>
+    </section>
+
+    <!-- Featured Team of the Day -->
+    <section class="featured-team" aria-labelledby="featured-heading">
+      <div class="section-header">
+        <h2 id="featured-heading">Featured Team of the Day</h2>
+        <p class="section-sub">A curated lineup — refreshed every day</p>
+      </div>
+      <div id="featured-grid" class="featured-grid" aria-live="polite" aria-label="Featured Pokémon team">
+        <div class="skeleton-card" aria-hidden="true"></div>
+        <div class="skeleton-card" aria-hidden="true"></div>
+        <div class="skeleton-card" aria-hidden="true"></div>
+        <div class="skeleton-card" aria-hidden="true"></div>
+        <div class="skeleton-card" aria-hidden="true"></div>
+        <div class="skeleton-card" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" aria-labelledby="how-heading">
+      <h2 id="how-heading">How It Works</h2>
+      <div class="steps">
+        <div class="step">
+          <span class="step-num">Step 01</span>
+          <h3>Browse the Pokédex</h3>
+          <p>Explore all 151 original Pokémon with full base stats, abilities, height, weight, and type information fetched live from PokéAPI.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">Step 02</span>
+          <h3>Build Your Team</h3>
+          <p>Add up to six Pokémon to your saved roster directly from the Pokédex. Your team is stored locally so it's always waiting for you on your next visit.</p>
+        </div>
+        <div class="step">
+          <span class="step-num">Step 03</span>
+          <h3>Analyze Coverage</h3>
+          <p>Head to My Team to review shared type weaknesses and your offensive coverage. Fine-tune your lineup to plug any strategic gaps before battle.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Type Quick Reference -->
+    <section class="type-ref" aria-labelledby="type-ref-heading">
+      <h2 id="type-ref-heading">Type Quick Reference</h2>
+      <div id="type-badges-list" class="type-badge-grid" aria-label="Pokémon types"></div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      PokéForge &nbsp;·&nbsp; WDD231 Individual Project &nbsp;·&nbsp; Ben Hoffman
+      &nbsp;·&nbsp; Data: <a href="https://pokeapi.co" target="_blank" rel="noopener noreferrer">PokéAPI</a>
+      &nbsp;·&nbsp; <a href="attributions.html">Attributions</a>
+      &nbsp;·&nbsp; <a href="https://youtu.be/DEMO_LINK" target="_blank" rel="noopener noreferrer">📹 Video Demo</a>
+    </p>
+  </footer>
+
+  <script type="module" src="scripts/home.js"></script>
+</body>
+</html>

@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="View and manage your saved PokéForge team. Analyze type coverage, identify shared weaknesses, and submit your trainer profile." />
+  <meta name="author" content="Ben Hoffman" />
+  <meta property="og:title" content="PokéForge – My Team" />
+  <meta property="og:description" content="View your saved Pokémon team, check type coverage, and manage your roster." />
+  <meta property="og:type" content="website" />
+  <title>My Team – PokéForge</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;900&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/team.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="PokéForge Home">
+        <div class="nav-pokeball" aria-hidden="true"></div>
+        PokéForge
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pokedex.html">Pokédex</a></li>
+        <li><a href="team.html">My Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1>My Team</h1>
+    <p>Your saved roster · up to 6 Pokémon · stored in your browser</p>
+  </div>
+
+  <main class="team-main">
+
+    <!-- Empty Team Banner (shown when team is empty) -->
+    <div id="empty-banner" class="empty-team-banner" aria-live="polite">
+      <div class="big-icon" aria-hidden="true">◯</div>
+      <h3>Your team is empty</h3>
+      <p>Head to the Pokédex and add up to six Pokémon to start building your roster.</p>
+      <a href="pokedex.html" class="btn btn-primary" id="browse-btn">Go to Pokédex</a>
+    </div>
+
+    <!-- Team Roster -->
+    <section class="team-section" aria-labelledby="roster-heading">
+      <h2 id="roster-heading">
+        <span aria-hidden="true">⚔</span> Team Roster
+      </h2>
+      <div id="team-grid" class="team-grid" aria-live="polite" aria-label="Team roster slots">
+        <!-- JS renders 6 slots -->
+      </div>
+      <div class="team-actions">
+        <a href="pokedex.html" class="btn btn-ghost">+ Add Pokémon</a>
+        <button id="clear-team-btn" class="btn btn-danger">✕ Clear Team</button>
+      </div>
+    </section>
+
+    <!-- Type Coverage Analysis -->
+    <section id="coverage-section" class="team-section" aria-labelledby="coverage-heading" style="display:none">
+      <h2 id="coverage-heading">
+        <span aria-hidden="true">◈</span> Type Coverage Analysis
+      </h2>
+      <div class="coverage-grid">
+        <div class="coverage-card strengths">
+          <h3>Offensive Types</h3>
+          <p class="text-muted" style="font-size:.8rem;margin-bottom:.75rem">Types your team can attack with</p>
+          <div id="offensive-types" class="coverage-tags" aria-live="polite"></div>
+        </div>
+        <div class="coverage-card weaknesses">
+          <h3>Shared Weaknesses</h3>
+          <p class="text-muted" style="font-size:.8rem;margin-bottom:.75rem">Types that hit 2+ team members</p>
+          <div id="shared-weaknesses" class="coverage-tags" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Trainer Form -->
+    <section id="team-form-section" class="team-form-section" style="display:none" aria-labelledby="form-heading">
+      <h2 id="form-heading">Submit Trainer Profile</h2>
+      <form
+        id="trainer-form"
+        action="form-action.html"
+        method="get"
+        novalidate
+        aria-label="Trainer profile submission form"
+      >
+        <div class="form-grid">
+
+          <div class="form-group">
+            <label for="trainer-name">Trainer Name <span aria-hidden="true" style="color:var(--accent-red)">*</span></label>
+            <input
+              type="text"
+              id="trainer-name"
+              name="trainer"
+              placeholder="Ash Ketchum"
+              required
+              minlength="2"
+              maxlength="40"
+              autocomplete="nickname"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="team-name">Team Name <span aria-hidden="true" style="color:var(--accent-red)">*</span></label>
+            <input
+              type="text"
+              id="team-name"
+              name="teamname"
+              placeholder="Team Valor"
+              required
+              minlength="2"
+              maxlength="40"
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="fav-pokemon">Favorite on This Team</label>
+            <select id="fav-pokemon" name="favorite">
+              <option value="">— Choose a Pokémon —</option>
+              <!-- JS populates from current team -->
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="badge-count">Gym Badges Earned</label>
+            <input
+              type="number"
+              id="badge-count"
+              name="badges"
+              min="0"
+              max="8"
+              placeholder="0–8"
+            />
+          </div>
+
+          <div class="form-group full">
+            <label for="strategy">Battle Strategy Notes</label>
+            <textarea
+              id="strategy"
+              name="strategy"
+              placeholder="Describe your team's strategy, strengths, or goals…"
+              rows="4"
+              maxlength="500"
+            ></textarea>
+            <span class="form-note">Optional · max 500 characters</span>
+          </div>
+
+        </div>
+
+        <div style="margin-top:1.5rem;display:flex;gap:1rem;flex-wrap:wrap">
+          <button type="submit" class="btn btn-primary">Submit Profile →</button>
+          <button type="reset" class="btn btn-ghost">Reset</button>
+        </div>
+      </form>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>
+      PokéForge &nbsp;·&nbsp; WDD231 Individual Project &nbsp;·&nbsp; Ben Hoffman
+      &nbsp;·&nbsp; Data: <a href="https://pokeapi.co" target="_blank" rel="noopener noreferrer">PokéAPI</a>
+      &nbsp;·&nbsp; <a href="attributions.html">Attributions</a>
+      &nbsp;·&nbsp; <a href="https://youtu.be/DEMO_LINK" target="_blank" rel="noopener noreferrer">📹 Video Demo</a>
+    </p>
+  </footer>
+
+  <script type="module" src="scripts/team.js"></script>
+</body>
+</html>

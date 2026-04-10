@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Browse all 151 original Pokémon on PokéForge. Filter by type, search by name, view full stats in a modal, and add Pokémon to your saved team." />
+  <meta name="author" content="Ben Hoffman" />
+  <meta property="og:title" content="PokéForge – Pokédex Browser" />
+  <meta property="og:description" content="Browse all 151 original Pokémon. Filter by type, view stats, and build your team." />
+  <meta property="og:type" content="website" />
+  <title>Pokédex Browser – PokéForge</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;900&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <link rel="stylesheet" href="styles/pokedex.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <header>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="PokéForge Home">
+        <div class="nav-pokeball" aria-hidden="true"></div>
+        PokéForge
+      </a>
+      <button class="hamburger" aria-label="Toggle navigation" aria-expanded="false" aria-controls="nav-links">☰</button>
+      <ul class="nav-links" id="nav-links" role="list">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pokedex.html">Pokédex</a></li>
+        <li><a href="team.html">My Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Page Header -->
+  <div class="page-header">
+    <h1>Pokédex</h1>
+    <p>All 151 original Pokémon — click any card to view full stats and add to your team</p>
+  </div>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar" role="search" aria-label="Filter Pokémon">
+    <div class="search-wrap">
+      <label for="search-input" class="visually-hidden">Search Pokémon by name or number</label>
+      <input
+        type="search"
+        id="search-input"
+        class="filter-input"
+        placeholder="Search name or #…"
+        autocomplete="off"
+        aria-label="Search Pokémon by name or number"
+      />
+    </div>
+    <label for="type-filter" class="visually-hidden">Filter by type</label>
+    <select id="type-filter" class="filter-select" aria-label="Filter by Pokémon type">
+      <option value="">All Types</option>
+      <!-- JS populates options -->
+    </select>
+    <button id="clear-filters" class="btn btn-ghost" style="height:40px;padding:0 1rem;">Clear</button>
+    <span id="results-count" class="filter-results" aria-live="polite"></span>
+  </div>
+
+  <!-- Pokémon Grid -->
+  <main class="pokedex-main">
+    <div
+      id="pokemon-grid"
+      class="pokemon-grid"
+      aria-label="Pokémon cards"
+      aria-live="polite"
+    >
+      <!-- Skeleton loaders shown until JS loads -->
+    </div>
+
+    <!-- Pagination -->
+    <nav id="pagination" class="pagination" aria-label="Pokédex pages"></nav>
+  </main>
+
+  <footer>
+    <p>
+      PokéForge &nbsp;·&nbsp; WDD231 Individual Project &nbsp;·&nbsp; Ben Hoffman
+      &nbsp;·&nbsp; Data: <a href="https://pokeapi.co" target="_blank" rel="noopener noreferrer">PokéAPI</a>
+      &nbsp;·&nbsp; <a href="attributions.html">Attributions</a>
+      &nbsp;·&nbsp; <a href="https://youtu.be/DEMO_LINK" target="_blank" rel="noopener noreferrer">📹 Video Demo</a>
+    </p>
+  </footer>
+
+  <!-- Pokémon Detail Modal -->
+  <dialog id="pokemon-modal" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-header">
+      <span id="modal-title" class="visually-hidden">Pokémon Details</span>
+      <button class="modal-close" aria-label="Close dialog">✕</button>
+    </div>
+    <div class="modal-body">
+      <!-- JS fills this -->
+    </div>
+  </dialog>
+
+  <script type="module" src="scripts/pokedex.js"></script>
+</body>
+</html>

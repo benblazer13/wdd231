@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PokéForge content attributions and external source citations." />
+  <meta name="author" content="Ben Hoffman" />
+  <title>Attributions – PokéForge</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;900&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <style>
+    .attr-wrap {
+      max-width: 720px;
+      margin: 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+    h1 {
+      font-family: var(--font-heading);
+      font-weight: 900;
+      font-size: 2rem;
+      color: var(--accent-yellow);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.4rem;
+    }
+    h2 {
+      font-family: var(--font-heading);
+      font-size: 1rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent-red);
+      margin: 2rem 0 0.75rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid var(--border);
+    }
+    p { color: var(--text-muted); margin-bottom: 0.5rem; }
+    ul { margin-left: 1.25rem; }
+    li { color: var(--text-muted); margin-bottom: 0.4rem; line-height: 1.6; }
+    a { color: var(--accent-yellow); }
+    a:hover { color: #fff; }
+    .intro { color: var(--text-primary); margin-bottom: 0.5rem; }
+    code {
+      font-size: 0.85rem;
+      background: var(--bg-card);
+      padding: 1px 6px;
+      border-radius: 4px;
+      color: var(--accent-yellow);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="PokéForge Home">
+        <div class="nav-pokeball" aria-hidden="true"></div>
+        PokéForge
+      </a>
+      <ul class="nav-links" style="display:flex;flex-direction:row;position:static;background:none;border:none;padding:0;gap:.25rem;">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pokedex.html">Pokédex</a></li>
+        <li><a href="team.html">My Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="attr-wrap">
+      <h1>Attributions</h1>
+      <p class="intro">PokéForge is a student project for WDD231. All external content and data sources are cited below.</p>
+
+      <h2>Pokémon Data API</h2>
+      <ul>
+        <li>
+          <strong>PokéAPI</strong> — <a href="https://pokeapi.co" target="_blank" rel="noopener noreferrer">https://pokeapi.co</a><br>
+          All Pokémon data (names, types, stats, abilities, height, weight) is retrieved live from PokéAPI, a free and open RESTful Pokémon API. Used under its open-use policy with no authentication required.
+        </li>
+      </ul>
+
+      <h2>Pokémon Sprites & Artwork</h2>
+      <ul>
+        <li>
+          Official artwork sprites retrieved from the PokéAPI sprites repository on GitHub:<br>
+          <code>https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{id}.png</code><br>
+          These assets are property of Nintendo / Game Freak / The Pokémon Company and are used here solely for non-commercial educational purposes.
+        </li>
+      </ul>
+
+      <h2>Typography</h2>
+      <ul>
+        <li>
+          <strong>Exo 2</strong> — Designed by Natanael Gama. Available via <a href="https://fonts.google.com/specimen/Exo+2" target="_blank" rel="noopener noreferrer">Google Fonts</a>. Licensed under the SIL Open Font License.
+        </li>
+        <li>
+          <strong>Nunito</strong> — Designed by Vernon Adams, Cyreal, Jacques Le Bailly. Available via <a href="https://fonts.google.com/specimen/Nunito" target="_blank" rel="noopener noreferrer">Google Fonts</a>. Licensed under the SIL Open Font License.
+        </li>
+      </ul>
+
+      <h2>Type Effectiveness Data</h2>
+      <ul>
+        <li>
+          Pokémon type effectiveness chart data referenced from <a href="https://bulbapedia.bulbagarden.net/wiki/Type" target="_blank" rel="noopener noreferrer">Bulbapedia – Type</a>. Bulbapedia is a community-written encyclopaedia. Data implemented manually in <code>scripts/utils.js</code>.
+        </li>
+      </ul>
+
+      <h2>Pokémon Intellectual Property Notice</h2>
+      <p>
+        Pokémon and all related names are trademarks of Nintendo, Game Freak, and The Pokémon Company. This site is an unofficial, non-commercial student project created for educational purposes as part of BYU-Idaho's WDD231 course. It is not affiliated with, endorsed by, or sponsored by Nintendo, Game Freak, or The Pokémon Company.
+      </p>
+
+      <h2>Course</h2>
+      <ul>
+        <li>WDD231 – Frontend Web Development I · BYU-Idaho · Ben Hoffman</li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      PokéForge &nbsp;·&nbsp; WDD231 Individual Project &nbsp;·&nbsp; Ben Hoffman
+      &nbsp;·&nbsp; <a href="https://youtu.be/DEMO_LINK" target="_blank" rel="noopener noreferrer">📹 Video Demo</a>
+    </p>
+  </footer>
+
+</body>
+</html>

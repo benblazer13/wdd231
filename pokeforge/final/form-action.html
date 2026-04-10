@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="PokéForge trainer profile submission confirmation page." />
+  <meta name="author" content="Ben Hoffman" />
+  <title>Profile Submitted – PokéForge</title>
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;600;700;900&family=Nunito:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles/global.css" />
+  <style>
+    .confirm-wrap {
+      max-width: 600px;
+      margin: 3rem auto;
+      padding: 0 1.5rem;
+    }
+    .confirm-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-bright);
+      border-radius: var(--radius);
+      padding: 2rem;
+      border-top: 4px solid var(--accent-red);
+    }
+    .confirm-icon {
+      font-size: 3rem;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+    .confirm-title {
+      font-family: var(--font-heading);
+      font-weight: 900;
+      font-size: 1.8rem;
+      color: var(--accent-yellow);
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 0.4rem;
+    }
+    .confirm-sub {
+      color: var(--text-muted);
+      margin-bottom: 2rem;
+    }
+    .field-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.9rem;
+      margin-bottom: 2rem;
+    }
+    .field-item {
+      background: var(--bg-card-alt);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-sm);
+      padding: 0.75rem 1rem;
+    }
+    .field-label {
+      font-family: var(--font-heading);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--accent-yellow);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .field-value {
+      color: var(--text-primary);
+      font-size: 0.95rem;
+      word-break: break-word;
+    }
+    .no-data {
+      color: var(--text-muted);
+      font-style: italic;
+      font-size: 0.85rem;
+    }
+    .back-links {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <nav class="site-nav" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="PokéForge Home">
+        <div class="nav-pokeball" aria-hidden="true"></div>
+        PokéForge
+      </a>
+      <ul class="nav-links" style="display:flex;flex-direction:row;position:static;background:none;border:none;padding:0;gap:.25rem;">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pokedex.html">Pokédex</a></li>
+        <li><a href="team.html">My Team</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="confirm-wrap">
+      <div class="confirm-card">
+        <span class="confirm-icon" aria-hidden="true">✓</span>
+        <h1 class="confirm-title">Profile Submitted!</h1>
+        <p class="confirm-sub">Here's a summary of what you submitted:</p>
+
+        <dl id="submitted-data" class="field-list" aria-label="Submitted form data">
+          <!-- JS renders fields here -->
+        </dl>
+
+        <div class="back-links">
+          <a href="team.html" class="btn btn-primary">Back to My Team</a>
+          <a href="pokedex.html" class="btn btn-ghost">Browse Pokédex</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>
+      PokéForge &nbsp;·&nbsp; WDD231 Individual Project &nbsp;·&nbsp; Ben Hoffman
+      &nbsp;·&nbsp; <a href="attributions.html">Attributions</a>
+      &nbsp;·&nbsp; <a href="https://youtu.be/DEMO_LINK" target="_blank" rel="noopener noreferrer">📹 Video Demo</a>
+    </p>
+  </footer>
+
+  <script>
+    // Display submitted GET parameters
+    const fields = {
+      trainer:  'Trainer Name',
+      teamname: 'Team Name',
+      favorite: 'Favorite Pokémon',
+      badges:   'Gym Badges',
+      strategy: 'Battle Strategy Notes'
+    };
+
+    const params = new URLSearchParams(window.location.search);
+    const dl = document.getElementById('submitted-data');
+
+    let hasData = false;
+
+    Object.entries(fields).forEach(([key, label]) => {
+      const val = params.get(key);
+      if (val !== null) {
+        hasData = true;
+        const dt = document.createElement('dt');
+        dt.className = 'field-item';
+        dt.innerHTML = `
+          <span class="field-label">${label}</span>
+          <span class="field-value">${val.trim() || '<em class="no-data">Not provided</em>'}</span>`;
+        dl.appendChild(dt);
+      }
+    });
+
+    if (!hasData) {
+      dl.innerHTML = '<p class="no-data">No submission data found. Please fill out and submit the form on <a href="team.html">My Team</a>.</p>';
+    }
+  </script>
+</body>
+</html>
